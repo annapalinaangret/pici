@@ -224,6 +224,89 @@ Topic:
 ## Diversity of collaborators
 
 ## Sentiment
+ 
+ <span class="label contribution">contribution</span> <span class="label initial-contribution">initial contribution</span> <span class="label thread">thread</span> 
+
+#### Subjective Sentiment
+
+#### Polarity of words (Textblob, Sentiwordnet)
+
+- [``avg_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+#### Subjectivity of words (Textblob, Sentiwordnet)
+
+- [``avg_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+### Positive Sentiment
+
+#### Proportion of positive words
+
+- [``idea_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+#### Mean positivity of words
+
+- [``idea_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+### Negative Sentiment
+
+#### Proportion of negative words
+- [``idea_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Mean negativity of words
+
+- [``idea_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+### Diverse Sentiment
+
+#### Standard Deviation of Polarity of words (Textblob, Sentiwordnet)
+
+- [``std_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``std_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Subjectivity of words (Textblob, Sentiwordnet)
+
+- [``std_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``std_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Mean positivity of words
+
+- [``std_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Mean negativity of words
+
+- [``std_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
 
 ## Openness
 
