@@ -1,8 +1,14 @@
 # Indicators
 
-Goal of the indicators: XYZ.
+## Overview
+
+The toolbox provides a repository of predefined indicators and simple tools to add new, custom indicators.
+
+### Structure
 
 By default, the central unit of observation is the forum **thread**, which can be part of one or multiple sub-forums. We propose that a thread is the *observable trace* of a sequence of interactions that can represent or display innovation activities. Each post in a thread is a **contribution** by a community member (the **contributor**). We single out the **initial contribution**, as we assume that XYZ. A **community** consists of a number of contributors and their contributions in threads, which are organized in sub-forums.
+
+### Networks
 
 Additional levels of observation are the **networks** formed by contributors. The two main representations are the *co-contribution network* and the *comment network*.
 
@@ -18,7 +24,15 @@ Additional levels of observation are the **networks** formed by contributors. Th
     <img src="../images/structure_and_terminology.png" width="700px" style="width: 55%; max-width:700px; min-width:300px;" />
 </p>
 
+### Levels of observation
+
 Each indicator is observed on either **contributor**, **contribution**, **thread**, or **community** level. Aggregations of indicators are provided for higher levels. For example, the *number of contributions made by a contributor* can be an indicator for their role in the community. This indicator would be provided on thread-level as, e.g., *average number of contributions per contributor*, measured for all contributors that have contributed to a specific thread. Common aggregations are mean, sum, standard-deviation, min and max. Other aggregations (or *transformations*) could also pick out a single of multiple values. On thread-level, an example would be the *total number of contributions made by the contributor of the initial contribution*.
+
+The thread observation level can be subdivided into three further subsets of posts: the whole thread, only the **initial contribution**, or only the **feedback** (all posts that were not authored by the initial contributor). This helps to implement indicators that rely on more detailed concepts, such as *ideas* in *idea communities*, or *questions* in *question communities*, which can potentially be operationalized by *inital contribution*.
+
+[TODO: Grafik]
+
+### Data
 
 In order to be able to apply indicators to a heterogeneous set of communities, most indicators rely on the following basic data that can be collected from most online forums:
 
@@ -28,6 +42,8 @@ In order to be able to apply indicators to a heterogeneous set of communities, m
 - thread: title
 
 Other data, such as likes/upvotes, friendship-relations, contributor location, thread views, etc., might be available in some communities and can be included in more specialized indicators.
+
+### List of indicators
 
 The following list conceptually groups all available indicators. Each indicator description links to all relevant metrics that are implemented in the toolbox. Each indicator is labelled with its level of observation: <span class="label contributor">contributor</span> <span class="label contribution">contribution</span> <span class="label initial-contribution">initial contribution</span>
  <span class="label thread">thread</span> <span class="label community">community</span>. Specialized indicators are marked with <span class="label specialized">specialized</span> and state which additional data is required.
@@ -208,12 +224,228 @@ Topic:
 ## Diversity of collaborators
 
 ## Sentiment
+ 
+ <span class="label contribution">contribution</span> <span class="label initial-contribution">initial contribution</span> <span class="label thread">thread</span> 
+ TO DO: <span class="label feedback">feedback</span>
+
+### Concept
+
+<p align="center">
+    <img src="../images/Sentiment Table 1.jpg" width="700px" style="width: 55%; max-width:700px; min-width:300px;" />
+</p>
+
+[1] Anderson, N. H. (1971). Integration theory and attitude change. Psychological review, 78(3), 171. 
+[2] Choi, J. N., Sung, S. Y., Lee, K., & Cho, D. S. (2011). Balancing cognition and emotion: Innovation implementation as a function of cognitive appraisal and emotional reactions toward innovation. Journal of Organizational Behavior, 32(1), 107-124.
+[3] Kelman, H. C. (1958). Compliance, identification, and internalization three processes of attitude change. Journal of conflict resolution, 2(1), 51-60.
+[4] Weiss, H. M., & Cropanzano, R. (1996). Affective events theory. Research in organizational behavior, 18(1), 1-74. 
+
+### Subjective Sentiment
+
+#### Polarity of words (Textblob, Sentiwordnet)
+
+- [``avg_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+#### Subjectivity of words (Textblob, Sentiwordnet)
+
+- [``avg_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``idea_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+### Positive Sentiment
+
+#### Proportion of positive words
+
+- [``idea_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_feedback_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_feedback_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``avg_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_pos_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+#### Mean positivity of words
+
+- [``idea_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+
+### Negative Sentiment
+
+#### Proportion of negative words
+- [``idea_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Mean negativity of words
+
+- [``idea_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_feedback_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_feedback_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``avg_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``aggregated_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+### Diverse Sentiment
+
+#### Standard Deviation of Polarity of words (Textblob, Sentiwordnet)
+
+- [``std_textblob_pol``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``std_SWN_Polarity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Subjectivity of words (Textblob, Sentiwordnet)
+
+- [``std_textblob_sub``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions)
+- [``std_SWN_Subjectivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Mean positivity of words
+
+- [``std_mean_positivity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Standard Deviation of Mean negativity of words
+
+- [``std_mean_negativity``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+[1] Beretta, M. (2019). Idea selection in web‐enabled ideation systems. Journal of Product Innova-tion Management, 36(1), 5-23.
+[2] Chan, K. W., Li, S. Y., Ni, J., & Zhu, J. J. (2021). What feedback matters? The role of experience in motivating crowdsourcing innovation. Production and Operations Management, 30(1), 103-126.
+[3] Lee, H., Choi, K., Yoo, D., Suh, Y., Lee, S., & He, G. (2018). Recommending valuable ideas in an open innovation community: a text mining approach to information overload prob-lem. Industrial Management & Data Systems.
+[4] Lee, H., & Suh, Y. (2016). Who creates value in a user innovation community? A case study of MyStarbucksIdea. com. Online Information Review.
+[5] Piezunka, H., & Dahlander, L. (2015). Distant search, narrow attention: How crowding alters or-ganizations’ filtering of suggestions in crowdsourcing. Academy of Management Journal, 58(3), 856-880.
 
 ## Openness
 
 ## Elaboration
 
+ <span class="label contribution">contribution</span> <span class="label thread">thread</span> 
+
+### Concept
+
+Elaboration is associated with the degree of quality, readability, and complexity of the semantic depiction of contributions, and is characterized by two main aspects: text quantity and linguistic style. Based on the Geneplore Model, novel creations are the product of preinventive idea generation and exploration. If preinventive ideas are characterized by originality (distinctiveness) and appropriateness (elaboration, relevance), the exploration of novel and desired attributes can lead to creative output. Furthermore, based on Elaboration Theory, there are certain linguistic indicators that influence writing quality and content comprehension. Writing quality is characterized by lexical sophistication and syntactic complexity and contains fewer errors. Additionally, studies have shown that more successful writers produce longer texts. A more pronounced elaboration indicates that the author is a more knowledgeable and trustworthy expert on the topic. Accordingly, the best-elaborated contributions with a relevant amount of information, and a concise and readable presentation, are more likely to be evaluated, implemented, and reproduced. 
+
+<p align="center">
+    <img src="../images/Elaboration Table 1.jpg" width="700px" style="width: 55%; max-width:700px; min-width:300px;" />
+</p>
+
+[1] Crossley, S. A., Kyle, K., & McNamara, D. S. (2016). The development and use of cohesive de-vices in L2 writing and their relations to judgments of essay quality. Journal of Second Language Writing, 32, 1-16.
+[2] Crossley, S. A., Roscoe, R., & McNamara, D. S. (2011, June). Predicting human scores of essay quality using computational indices of linguistic and textual features. In International conference on artificial intelligence in education (pp. 438-440). Springer, Berlin, Heidelberg.
+[3] Finke, R. A., Ward, T. B., & Smith, S. M. (1996). Creative cognition: Theory, research, and ap-plications. MIT press.
+[4] Finke, R. A., & Slayton, K. (1988). Explorations of creative visual synthesis in mental image-ry. Memory & cognition, 16(3), 252-257.
+
+### High Elaboration
+
+#### Length of text (number of words)
+- [``avg_thread_length``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+- [``aggregated_thread_length``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Number of syllables
+- [``avg_number_syllables_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+- [``aggregated_number_syllables_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Punctuation Density (Proportion of all characters)
+- [``avg_content_punctuation_prop_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+- [``aggregated_content_punctuation_prop_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Spacing Density (proportion of all characters)
+ 
+#### Capitalization Density (proportion of all characters)
+ 
+#### Flesch-Reading-Ease Score
+- [``flesch_reading_ease``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Automatic Readability Index
+- [``automated_readability_index``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+### Complex Elaboration
+
+#### Number of References (links)
+- [``avg_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+- [``aggregated_neg_prop``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Flesch-Kincaid Formula
+- [``flesch_kincaid_grade``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Smog Grading
+- [``smog_index``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Coleman-Lieau Index
+- [``coleman_liau_index``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Dale-Chall Readbility Score
+- [``dale_chall_readability_score``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Number of difficult words
+- [``difficult_words``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+#### Linsear Write Formula
+- [``linsear_write_formula``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+### Low Elaboration
+
+#### Number of Spelling Mistakes
+- [``avg_spelling_mistakes_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``aggregated_spelling_mistakes_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO  
+ 
+#### Number of Punctuation Mistakes
+- [``avg_content_punctuations_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+- [``aggregated_content_punctuations_thread``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO 
+
+[1] Agichtein, E., Castillo, C., Donato, D., Gionis, A., & Mishne, G. (2008, February). Finding high-quality content in social media. In Proceedings of the 2008 international conference on web search and data mining (pp. 183-194).
+[2] Beretta, M. (2019). Idea selection in web‐enabled ideation systems. Journal of Product Innova-tion Management, 36(1), 5-23.
+[3] Di Gangi, P. M., & Wasko, M. (2009). The co-creation of value: Exploring user engagement in user-generated content websites. In Proceedings of JAIS theory development workshop. sprouts: working papers on information systems (Vol. 9, No. 50, pp. 9-50).
+[4] Grosse, M., Pohlisch, J., & Korbel, J. J. (2018). Triggers of collaborative innovation in online user communities. Journal of Open Innovation: Technology, Market, and Complexity, 4(4), 59.
+[5] Lee, H., Choi, K., Yoo, D., Suh, Y., Lee, S., & He, G. (2018). Recommending valuable ideas in an open innovation community: a text mining approach to information overload prob-lem. Industrial Management & Data Systems.
+[6] Lee, H., & Suh, Y. (2016). Who creates value in a user innovation community? A case study of MyStarbucksIdea. com. Online Information Review.
+[7] Li, M., Kankanhalli, A., & Kim, S. H. (2016). Which ideas are more likely to be implemented in online user innovation communities? An empirical analysis. Decision Support Systems, 84, 28-40.
+[8] Nagar, Y., De Boer, P., & Garcia, A. C. B. (2016). Accelerating the review of complex intellectual artifacts in crowdsourced innovation challenges.
+[9] Piezunka, H., & Dahlander, L. (2015). Distant search, narrow attention: How crowding alters or-ganizations’ filtering of suggestions in crowdsourcing. Academy of Management Journal, 58(3), 856-880.
+[10] Resch, K., Fellner, M., Fahrenwald, C., Slepcevic-Zach, P., Knapp, M., & Rameder, P. (2020). Embedding Social Innovation and Service Learning in Higher Education's Third Sector Policy Developments in Austria. In Frontiers in Education (p. 112). Frontiers.
+[11] Rhyn, M., & Blohm, I. (2017). A machine learning approach for classifying textual data in crowdsourcing.
+
 ## Distinctiveness
+
+ <span class="label contribution">contribution</span> <span class="label thread">thread</span> 
+
+### concept
+
+This PI factor refers to the uniqueness and novelty of a contribution by capturing the degree of similarity of the current contribution to previous ones in the PI community. Distinct contributions discuss concepts that are substantially different from prior ideas, contain distant knowledge and novelty. Based on Creative Cognition Theory, if preinventive ideas are characterized by originality (distinctiveness) and appropriateness (elaboration, relevance), the exploration of novel and desired attributes can lead to creative output. Characterizing a problem more abstractly rather than considering specific solutions to previous problems is less constraining and more likely to lead to innovation. The concept of Distant Knowledge, based on the Attention-based View and research on Information Overload, highlights that novelty and abstraction in problem formulation can foster creativity in subsequent processing. Promising ideas have an optimal level of creativity, balance novelty with familiarity, and are associated with rarity and high user demand.
+
+<p align="center">
+    <img src="../images/Distinctiveness Table 1.jpg" width="700px" style="width: 55%; max-width:700px; min-width:300px;" />
+</p>
+
+[1] Hoornaert, S., Ballings, M., Malthouse, E. C., & Van den Poel, D. (2017). Identifying new product ideas: waiting for the wisdom of the crowd or screening ideas in real time. Journal of Product Innovation Management, 34(5), 580-597.
+[2] Huber, G. P., & Daft, R. L. (1987). The information environments of organizations.
+[3] Ocasio, W. (1997). Towards an attention‐based view of the firm. Strategic management journal, 18(S1), 187-206.
+[4] Piezunka, H., & Dahlander, L. (2015). Distant search, narrow attention: How crowding alters or-ganizations’ filtering of suggestions in crowdsourcing. Academy of Management Journal, 58(3), 856-880.
+[5] Thorleuchter, D., Van den Poel, D., & Prinzie, A. (2010). Mining ideas from textual infor-mation. Expert Systems with Applications, 37(10), 7182-7188.
+[6] Toubia, O., & Netzer, O. (2017). Idea generation, creativity, and prototypicality. Marketing sci-ence, 36(1), 1-20.
+
+### High Distinctiveness
+
+#### TF.IDF-indices (Specificity) 
+
+- [``tfidf_sum``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO
+- [``tfidf_avg``](../reference/pici/metrics/basic/#pici.metrics.basic.number_of_contributions) # TO DO  
+
+#### Topic Structure with LDA
+probability per topic (total number of topics depends on highest coherence score)
+
+[1] Resch, K., Fellner, M., Fahrenwald, C., Slepcevic-Zach, P., Knapp, M., & Rameder, P. (2020). Embedding Social Innovation and Service Learning in Higher Education's Third Sector Policy Developments in Austria. In Frontiers in Education (p. 112). Frontiers.
+[2] Rhyn, M., & Blohm, I. (2017). A machine learning approach for classifying textual data in crowdsourcing.
 
 ## Community feedback
 
